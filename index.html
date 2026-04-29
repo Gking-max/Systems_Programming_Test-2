@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Dark Mode Toggle -->
+        <button class="dark-mode-toggle" id="darkModeToggle">🌙 Dark Mode</button>
+
+        <!-- Feedback Form -->
+        <div class="form-container">
+            <h2>Feedback Form</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="rating">Rating:</label>
+                    <select id="rating" name="rating" required>
+                        <option value="">Select Rating</option>
+                        <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+                        <option value="4">⭐⭐⭐⭐ - Good</option>
+                        <option value="3">⭐⭐⭐ - Average</option>
+                        <option value="2">⭐⭐ - Poor</option>
+                        <option value="1">⭐ - Very Poor</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments">Message:</label>
+                    <textarea id="comments" name="comments" rows="4" placeholder="Enter your feedback message..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Feedback</button>
+            </form>
+        </div>
+
+        <!-- Display Section -->
+        <div class="display-container">
+            <h2>All Feedback</h2>
+            
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button onclick="loadAllFeedback()" class="filter-btn active">All</button>
+                <button onclick="loadOnlyNames()" class="filter-btn">Only Names</button>
+                <button onclick="loadOnlyEmails()" class="filter-btn">Only Emails</button>
+                <button onclick="loadOnlyComments()" class="filter-btn">Only Messages</button>
+            </div>
+
+            <!-- Feedback List -->
+            <div id="feedbackList" class="feedback-list">
+                <div class="loading">Loading feedback...</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+DROP INDEX IF EXISTS idx_email;
+DROP INDEX IF EXISTS idx_rating;
+DROP TABLE IF EXISTS feedback;

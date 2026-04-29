@@ -1,0 +1,17 @@
+.git
+.gitignore
+.devcontainer
+*.md
+*.log
+*.swp
+*.tmp
+**/*_test.go
+Dockerfile
+docker-compose.yml
+.vscode
+.env
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
